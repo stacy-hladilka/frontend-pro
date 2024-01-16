@@ -23,7 +23,7 @@ console.log(
 );
 let thirdBuffer = "";
 const firstInteger = 273;
-for (let number = 1; number <= 100 && number ** 2 < firstInteger; number++) {
+for (let number = 1; number <= 100 && number ** 2 <= firstInteger; number++) {
   const middleSymbol = thirdBuffer === "" ? "" : " ";
   thirdBuffer = thirdBuffer + middleSymbol + number;
 }
