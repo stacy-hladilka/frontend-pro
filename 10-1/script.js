@@ -26,12 +26,26 @@ function doMath(x, znak, y) {
   if (!["+", "-", "*", "/", "%", "ˆ"].includes(znak)) {
     return;
   }
-  znak = znak.replace("ˆ", "**");
   if (typeof x !== "number" || typeof y !== "number") {
     return;
   }
-  const result = eval(`${x} ${znak} ${y}`);
-  return result;
+
+  switch (znak) {
+    case "+":
+      return x + y;
+    case "-":
+      return x - y;
+    case "*":
+      return x * y;
+    case "/":
+      return x / y;
+    case "%":
+      return x % y;
+    case "ˆ":
+      return x ** y;
+    default:
+      return;
+  }
 }
 function askAndDoMath() {
   const firstValue = prompt("Enter first number");
@@ -107,19 +121,22 @@ console.log(
   `Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом. 'func(" hello world", ['l', 'd'])' поверне нам "heo wor". Вихідний рядок та символи для видалення задає користувач.`
 );
 function removeSymbols(string, symbols) {
+  let resultString = string;
   for (let i = 0; i < symbols.length; i++) {
-    string = string.replace(symbols[i], "");
+    resultString = resultString.replace(symbols[i], "");
   }
-  return string;
+  return resultString;
 }
 function askSymbols() {
   const chosenString = prompt("Enter the sentence");
   if (chosenString === null) {
     alert("You've canceled!");
+    return;
   }
   const chosenSymbols = prompt("Enter symbols you'd like to remove");
   if (chosenSymbols === null) {
     alert("You've canceled!");
+    return;
   }
   const symbolsArr = chosenSymbols.split("");
   const filteredString = removeSymbols(chosenString, symbolsArr);
