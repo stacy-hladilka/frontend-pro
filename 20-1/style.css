@@ -1,0 +1,9 @@
+.main-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#side-block {
+    display: inline;
+    visibility: hidden;
+}
