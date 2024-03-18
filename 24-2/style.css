@@ -1,0 +1,26 @@
+#table {
+  text-align: center;
+  font-size: x-large;
+  display: none;
+  justify-content: center;
+  border: 1px solid blue;
+}
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#name-surname-input {
+  margin-bottom: 10px;
+}
+#gender-choice-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#city-input {
+  margin-bottom: 10px;
+}
+#languages-choice-wrapper {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <table id="table">
+      <tr class="table-row">
+        <td id="name-surname-cell"></td>
+      </tr>
+      <tr class="table-row">
+        <td id="birth-date-cell"></td>
+      </tr>
+      <tr class="table-row">
+        <td id="gender-cell"></td>
+      </tr>
+      <tr class="table-row">
+        <td id="city-cell"></td>
+      </tr>
+      <tr class="table-row">
+        <td id="address-cell"></td>
+      </tr>
+      <tr class="table-row">
+        <td id="languages-cell"></td>
+      </tr>
+    </table>
+    <form id="signup-form">
+      <input
+        type="text"
+        id="name-surname-input"
+        placeholder="First name & Last name"
+      />
+      <input type="text" id="birth-date-input" placeholder="Enter Birth Date" />
+      <fieldset id="gender-choice-wrapper">
+        <legend>Specify gender:</legend>
+        <input
+          name="genders"
+          type="radio"
+          value="female"
+          class="gender-input"
+          id="female-gender"
+        />
+        <label for="female-gender" class="gender-option">Female</label>
+        <input
+          name="genders"
+          type="radio"
+          value="male"
+          class="gender-input"
+          id="male-gender"
+        />
+        <label for="male-gender" class="gender-option">Male</label>
+        <input
+          name="genders"
+          type="radio"
+          value="other"
+          class="gender-input"
+          id="other-gender"
+        />
+        <label for="other-gender" class="gender-option">Other</label>
+      </fieldset>
+      <select id="city-input">
+        <option class="city-option" value="Kharkiv">Kharkiv</option>
+        <option class="city-option" value="Kyiv">Kyiv</option>
+        <option class="city-option" value="Lviv">Lviv</option>
+        <option class="city-option" value="Odesa">Odesa</option>
+        <option class="city-option" value="Dnipro">Dnipro</option>
+      </select>
+
+      <textarea placeholder="Enter Address" id="address-input"></textarea>
+
+      <fieldset id="languages-choice-wrapper">
+        <legend>Select languages you know</legend>
+        <input
+          value="Ukrainian"
+          name="languages"
+          type="checkbox"
+          class="languages-input"
+          id="ua-language"
+        />
+        <label for="ua-language" class="language-option">Ukrainian</label>
+        <input
+          value="English"
+          name="languages"
+          type="checkbox"
+          class="languages-input"
+          id="en-language"
+        />
+        <label for="en-language" class="language-option">English</label>
+        <input
+          value="German"
+          name="languages"
+          type="checkbox"
+          class="languages-input"
+          id="de-language"
+        />
+        <label for="de-language" class="language-option">German</label>
+        <input
+          value="French"
+          name="languages"
+          type="checkbox"
+          class="languages-input"
+          id="fr-language"
+        />
+        <label for="fr-language" class="language-option">French</label>
+        <input
+          value="Spanish"
+          name="languages"
+          type="checkbox"
+          class="languages-input"
+          id="es-language"
+        />
+        <label for="es-language" class="language-option">Spanish</label>
+      </fieldset>
+      <input type="submit" value="Save" id="save-button" />
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
