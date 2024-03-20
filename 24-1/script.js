@@ -67,9 +67,7 @@ const buyClickHandler = (product) => {
   productInfo.appendChild(formClone);
   formClone.style.display = "flex";
 
-  formClone.addEventListener("submit", (e) => onSubmit(e, product), {
-    once: true,
-  });
+  formClone.addEventListener("submit", (e) => onSubmit(e, product));
 };
 
 const onSubmit = (e, product) => {
