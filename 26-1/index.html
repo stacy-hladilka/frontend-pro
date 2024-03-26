@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="main-section">
+      <ul id="categories-container"></ul>
+      <ul id="products-container"></ul>
+      <div id="product-info"></div>
+    </div>
+
+    <ol id="orders-list"></ol>
+
+    <button id="orders-button">My Orders</button>
+
+    <button id="back-button">Back to menu</button>
+
+    <form id="form">
+      <input
+        class="input-offset"
+        type="text"
+        id="name-surname-input"
+        placeholder="First name & Last name"
+      />
+
+      <select class="input-offset" id="city-input">
+        <option class="city-option" value="Kharkiv">Kharkiv</option>
+        <option class="city-option" value="Kyiv">Kyiv</option>
+        <option class="city-option" value="Lviv">Lviv</option>
+        <option class="city-option" value="Odesa">Odesa</option>
+        <option class="city-option" value="Dnipro">Dnipro</option>
+      </select>
+
+      <select class="input-offset" id="novapost-input">
+        <option class="post-option" value="72, Dudynskoii St">
+          72, Dudynskoii St
+        </option>
+        <option class="post-option" value="82, Poltavskyi Shliakh St">
+          82, Poltavskyi Shliakh St
+        </option>
+        <option class="post-option" value="103, Kholodnohirska St">
+          103, Kholodnohirska St
+        </option>
+        <option class="post-option" value="48, Slavy Ave">48, Slavy Ave</option>
+        <option class="post-option" value="8, Mala Honcharivska St">
+          8, Mala Honcharivska St
+        </option>
+      </select>
+
+      <input
+        class="input-offset"
+        type="number"
+        id="amount-input"
+        value="1"
+        min="1"
+        max="5"
+      />
+
+      <fieldset class="input-offset" id="payment-input">
+        <legend>Specify type of payment:</legend>
+        <input
+          name="payment"
+          type="radio"
+          value="post-payment"
+          class="payment-type"
+          id="post-payment"
+        />
+        <label for="post-payment" class="payment-option">post-payment</label>
+        <input
+          name="payment"
+          type="radio"
+          value="card-payment"
+          class="payment-type"
+          id="card-payment"
+        />
+        <label for="card-payment" class="payment-option">card-payment</label>
+      </fieldset>
+
+      <textarea
+        class="input-offset"
+        placeholder="Enter comment to the order"
+        id="comment-input"
+      ></textarea>
+
+      <input
+        class="input-offset"
+        type="submit"
+        value="Confirm your order"
+        id="confirm-button"
+      />
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
