@@ -75,6 +75,27 @@ const buyClickHandler = (product) => {
   formClone.addEventListener("submit", (e) => onSubmit(e, product));
 };
 
+function addOrder(key, order) {
+  const oldOrders = getOrders();
+  oldOrders[key] = order;
+  localStorage.setItem("orders", JSON.stringify(oldOrders));
+}
+function getOrders() {
+  const oldOrdersString = localStorage.getItem("orders");
+  let oldOrders;
+  if (oldOrdersString === null) {
+    oldOrders = {};
+  } else {
+    oldOrders = JSON.parse(oldOrdersString);
+  }
+  return oldOrders;
+}
+function removeOrder(key) {
+  const orders = getOrders();
+  delete orders[key];
+  localStorage.setItem("orders", JSON.stringify(orders));
+}
+
 const onSubmit = (e, product) => {
   e.preventDefault();
   const formClone = document.getElementById("form-clone");
@@ -111,7 +132,7 @@ const onSubmit = (e, product) => {
       city: cityInput.value,
       post: novapostInput.value,
     };
-    localStorage.setItem(orderKey, JSON.stringify(orderData));
+    addOrder(orderKey, orderData);
 
     productsContainer.innerHTML = "";
     productInfo.innerHTML = "";
@@ -125,9 +146,9 @@ ordersButton.addEventListener("click", () => {
   mainSection.style.display = "none";
   ordersList.style.display = "block";
 
-  Object.keys(localStorage).forEach((orderItemKey) => {
-    const orderItemString = localStorage[orderItemKey];
-    const orderItem = JSON.parse(orderItemString);
+  const orders = getOrders();
+  Object.keys(orders).forEach((orderItemKey) => {
+    const orderItem = orders[orderItemKey];
     const listItem = document.createElement("li");
     listItem.innerText = `Product title: ${orderItem.title}; Product price: ${orderItem.price}; Order Date: ${orderItem.date}`;
     ordersList.appendChild(listItem);
@@ -138,7 +159,7 @@ ordersButton.addEventListener("click", () => {
     listItem.appendChild(removeButton);
     removeButton.addEventListener("click", () => {
       ordersList.removeChild(listItem);
-      localStorage.removeItem(orderItemKey);
+      removeOrder(orderItemKey);
     });
 
     let expanded = false;
