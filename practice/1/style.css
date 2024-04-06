@@ -1,0 +1,27 @@
+#form {
+  display: flex;
+  justify-content: center;
+}
+#check-password {
+    background-color: rgb(224, 255, 245);
+}
+#secure-password {
+  display: none;
+  text-align: center;
+  color: green;
+}
+#average-password {
+  display: none;
+  text-align: center;
+  color: rgb(196, 208, 58);
+}
+#insecure-password {
+  display: none;
+  text-align: center;
+  color: orange;
+}
+#bad-password {
+  display: none;
+  text-align: center;
+  color: red;
+}
