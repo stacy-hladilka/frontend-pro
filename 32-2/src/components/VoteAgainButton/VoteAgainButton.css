@@ -1,0 +1,10 @@
+.vote-again {
+  align-self: center;
+  padding: 20px;
+  background-color: rgb(255, 255, 113);
+  font-size: 28px;
+  border-radius: 20px;
+}
+.vote-again::placeholder {
+  cursor: pointer;
+}

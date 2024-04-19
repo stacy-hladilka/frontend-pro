@@ -1,0 +1,17 @@
+.header {
+  background-color: rgb(250, 255, 209);
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: blueviolet;
+}
+.header-description {
+  color: rgb(58, 17, 96);
+  font-size: 25px;
+  font-style: italic;
+}

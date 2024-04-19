@@ -1,0 +1,15 @@
+.navigation-list {
+  padding: 50px;
+  font-size: 30px;
+  background-color: rgb(185, 255, 232);
+}
+.navigation-item {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.navigation-item:hover {
+    background-color: rgb(162, 193, 255);
+}
+.navigation-item__link {
+  color: rgb(54, 19, 84);
+}

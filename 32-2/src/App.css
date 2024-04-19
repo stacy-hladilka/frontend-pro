@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.main-container {
+  display: flex;
+  justify-content: space-around;
+}
