@@ -1,0 +1,25 @@
+.contacts-table {
+  border-spacing: 0px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.contacts-table__title-row,
+.contacts-table__row {
+}
+.contacts-table__title-cell {
+  background-color: rgb(220, 183, 255);
+  color: rgb(72, 1, 138);
+}
+.contacts-table__title-cell,
+.contacts-table__cell {
+  border: 1px solid purple;
+  border-collapse: collapse;
+  padding: 15px;
+}
+button {
+  background-color: rgb(220, 183, 255);
+  border: 2px solid purple;
+  padding: 10px;
+  border-radius: 15px;
+  color: rgb(54, 4, 100);
+}
