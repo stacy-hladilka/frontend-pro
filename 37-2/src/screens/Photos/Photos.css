@@ -1,0 +1,14 @@
+.photos-wrapper {
+  margin-top: 30px;
+}
+.link-button {
+  padding: 10px;
+  border: 2px solid rgb(83, 0, 102);
+  background-color: rgb(209, 181, 255);
+  border-radius: 20px;
+}
+.photos-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

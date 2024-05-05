@@ -1,0 +1,27 @@
+.data-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-data {
+  border: 2px solid purple;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgb(226, 196, 255);
+}
+.input-data:not(:first-child) {
+  margin-top: 10px;
+}
+.submit-button {
+  border: 2px solid rgb(4, 4, 142);
+  background-color: rgb(100, 100, 255);
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  margin-top: 10px;
+}
+.error {
+  font-size: 12px;
+  color: rgb(188, 0, 0);
+  font-weight: bold;
+}

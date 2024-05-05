@@ -1,0 +1,19 @@
+.contacts-table {
+  text-align: center;
+  border-spacing: 0px;
+  border: 2px solid rgb(55, 2, 55);
+  border-collapse: collapse;
+}
+.contact-cell {
+  color: rgb(0, 0, 174);
+  border: 2px solid rgb(55, 2, 55);
+  border-collapse: collapse;
+  padding: 15px;
+  background-color: rgb(223, 255, 255);
+}
+.user-albums {
+  padding: 10px;
+  border: 2px solid rgb(0, 0, 194);
+  background-color: rgb(181, 218, 255);
+  border-radius: 20px;
+}
