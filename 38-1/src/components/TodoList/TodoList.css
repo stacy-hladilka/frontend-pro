@@ -1,0 +1,15 @@
+.todo-list {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  list-style: none;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.list-item {
+  list-style: none;
+}
+.list-item__checkbox-text_checked {
+  text-decoration: line-through;
+}
